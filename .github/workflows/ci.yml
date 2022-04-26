@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
-    - uses: ph-fritsche/action-release@debug
+    - uses: ph-fritsche/action-release@fix-install
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
