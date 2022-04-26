@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ph-fritsche/action-release@debug
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        debug: true
+        dry: true
